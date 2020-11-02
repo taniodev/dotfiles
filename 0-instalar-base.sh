@@ -3,6 +3,7 @@ set -e
 
 hostname="arch"
 linguagem="pt_BR.UTF-8"
+usuario="tanio"
 
 # Pacotes que serão instalados no sistema base
 pacotes=(
@@ -51,9 +52,10 @@ arch-chroot /mnt << EOF
     grub-install --target=i386-pc --recheck /dev/sda
     grub-mkconfig -o /boot/grub/grub.cfg
 
-    # Configura o sudo
+    # Cria um usuário e configura o sudo
     groupadd sudo
     sed -i "s/# %sudo/%sudo/" /etc/sudoers
+    useradd -m $usuario -G sudo
 
     # Configura as variáveis de ambiente para ativar a acessibilidade dos programas
     echo "ACCESSIBILITY_ENABLED=1" >> /etc/environment
