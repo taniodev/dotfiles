@@ -21,6 +21,18 @@ pacotes=(
 
 pacman -S --needed --noconfirm ${pacotes[@]}
 
+# Pacotes do AUR a instalar
+sudo -i -u $user << 'EOF'
+    pacotes=(
+        emacspeak hunspell-pt-br visual-studio-code-bin yaru-sound-theme
+    )
+
+    mkdir -p ~/.builds && cd ~/.builds
+    git clone https://aur.archlinux.org/yay.git
+    cd yay && makepkg -sirc --needed --noconfirm
+    yay -S --needed --noconfirm ${pacotes[@]}
+EOF
+
 # Desativar serviços
 systemctl disable sshd
 

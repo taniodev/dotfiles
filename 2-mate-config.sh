@@ -15,7 +15,7 @@ gsettings set org.gnome.desktop.a11y.applications screen-reader-enabled true
 gsettings set org.mate.interface accessibility true
 
 # Habilita os sons do sistema
-gsettings set org.mate.sound theme-name 'freedesktop'
+gsettings set org.mate.sound theme-name 'Yaru'
 gsettings set org.mate.sound event-sounds true
 gsettings set org.mate.sound input-feedback-sounds true
 
