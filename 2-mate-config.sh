@@ -75,3 +75,17 @@ gsettings set org.mate.Marco.window-keybindings move-to-workspace-left '<Mod4><C
 gsettings set org.mate.Marco.window-keybindings move-to-workspace-right '<Mod4><Control><Shift>Right'
 gsettings set org.mate.Marco.window-keybindings move-to-workspace-up '<Mod4><Control><Shift>Up'
 gsettings set org.mate.Marco.window-keybindings move-to-workspace-down '<Mod4><Control><Shift>Down'
+
+
+# Configura alguns atalhos no Mate dock applet
+tee ~/.config/mate_dock_applet.conf << EOF
+<root><pinned_apps>
+<desktop_file name="pluma.desktop" />
+<desktop_file name="thunderbird.desktop" />
+<desktop_file name="firefox.desktop" />
+<desktop_file name="chromium.desktop" />
+</pinned_apps></root>
+EOF
+
+
+echo "Concluído!"
