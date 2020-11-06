@@ -15,7 +15,7 @@ user=$SUDO_USER
 # Pacotes a instalar
 pacotes=(
     xorg-server mate mate-extra lightdm lightdm-gtk-greeter
-    git emacs espeak-ng openssh orca vlc wget xdg-user-dirs
+    git docker docker-compose emacs espeak-ng openssh orca vlc wget xdg-user-dirs
     chromium firefox firefox-i18n-pt-br thunderbird thunderbird-i18n-pt-br w3m
 )
 
@@ -24,7 +24,7 @@ pacman -S --needed --noconfirm ${pacotes[@]}
 # Pacotes do AUR a instalar
 sudo -i -u $user << 'EOF'
     pacotes=(
-        emacspeak hunspell-pt-br visual-studio-code-bin yaru-sound-theme
+        brisk-menu emacspeak hunspell-pt-br visual-studio-code-bin yaru-sound-theme
     )
 
     mkdir -p ~/.builds && cd ~/.builds
