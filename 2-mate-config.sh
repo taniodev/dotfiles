@@ -24,6 +24,21 @@ gsettings set org.mate.caja.desktop computer-icon-visible false
 gsettings set org.mate.caja.desktop volumes-visible false
 gsettings set org.mate.caja.desktop home-icon-visible false
 
+# Modo de exibição padrão ao acessar uma pasta
+gsettings set org.mate.caja.preferences default-folder-viewer 'compact-view'
+
+# Coloca novas abas do caja ao final da lista de abas
+gsettings set org.mate.caja.preferences tabs-open-position 'end'
+
+# Desativa a contagem do número de ítens das pastas
+gsettings set org.mate.caja.preferences show-directory-item-counts 'never'
+
+# Desativa a reprodução de arquivos de som ao passar o mouse
+gsettings set org.mate.caja.preferences preview-sound 'never'
+
+# Desativa a previsão rápida do conteúdo dos arquivos de texto
+gsettings set org.mate.caja.preferences show-icon-text 'never'
+
 # Desabilita o bloqueio da tela quando entrar a proteção de tela
 gsettings set org.mate.screensaver lock-enabled false
 
