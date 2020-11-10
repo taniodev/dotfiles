@@ -71,3 +71,7 @@ arch-chroot /mnt << EOF
     echo "vm.vfs_cache_pressure=50" >> /etc/sysctl.d/99-sysctl.conf
 
 EOF
+
+
+echo "Concluído!"
+echo "Não se esqueça de definir a senha dos usuários root e $usuario."
