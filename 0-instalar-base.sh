@@ -4,6 +4,7 @@ set -e
 hostname="arch"
 linguagem="pt_BR.UTF-8"
 usuario="tanio"
+ponto_de_montagem="/mnt"
 
 # Pacotes que serão instalados no sistema base
 pacotes=(
@@ -14,7 +15,7 @@ pacotes=(
 
 
 # Começa a instalação da base do sistema e dos pacotes
-pacstrap /mnt ${pacotes[@]}
+pacstrap $ponto_de_montagem ${pacotes[@]}
 
 # Configura um arquivo swap
 dd if=/dev/zero of=/mnt/swapfile bs=1M count=2048
@@ -23,11 +24,11 @@ mkswap /mnt/swapfile
 swapon /mnt/swapfile
 
 # Configura o fstab
-genfstab -L /mnt >> /mnt/etc/fstab
+genfstab -L $ponto_de_montagem >> $ponto_de_montagem/etc/fstab
 
 
 # Configurações no sistema que foi instalado
-arch-chroot /mnt << EOF
+arch-chroot $ponto_de_montagem << EOF
     # Idioma
     sed -i "s/#$linguagem/$linguagem/" /etc/locale.gen
     locale-gen
