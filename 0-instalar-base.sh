@@ -14,14 +14,19 @@ pacotes=(
 )
 
 
+function configurar_arquivo_swap() {
+    dd if=/dev/zero of=$ponto_de_montagem/swapfile bs=1M count=2048
+    chmod 600 $ponto_de_montagem/swapfile
+    mkswap $ponto_de_montagem/swapfile
+    swapon $ponto_de_montagem/swapfile
+}
+
+
 # Começa a instalação da base do sistema e dos pacotes
 pacstrap $ponto_de_montagem ${pacotes[@]}
 
-# Configura um arquivo swap
-dd if=/dev/zero of=/mnt/swapfile bs=1M count=2048
-chmod 600 /mnt/swapfile
-mkswap /mnt/swapfile
-swapon /mnt/swapfile
+# Descomente a linha abaixo se quiser usar um arquivo swap
+# configurar_arquivo_swap
 
 # Configura o fstab
 genfstab -L $ponto_de_montagem >> $ponto_de_montagem/etc/fstab
