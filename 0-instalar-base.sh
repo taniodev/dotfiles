@@ -68,6 +68,9 @@ arch-chroot $ponto_de_montagem << EOF
     echo "QT_ACCESSIBILITY=1" >> /etc/environment
     echo "QT_LINUX_ACCESSIBILITY_ALWAIS_ON=1" >> /etc/environment
 
+    # systemd: Desativa a suspensão ao fechar a tampa do notebook
+    sed -i "s/#HandleLidSwitch=suspend/HandleLidSwitch=ignore/" /etc/systemd/logind.conf
+
     # Habilita serviços
     systemctl enable espeakup
     systemctl enable NetworkManager
