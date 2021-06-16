@@ -10,7 +10,7 @@ ponto_de_montagem="/mnt"
 pacotes=(
     base base-devel linux-zen linux-firmware
     grub networkmanager ntfs-3g os-prober
-    alsa-utils pulseaudio pulseaudio-alsa espeakup nano
+    espeakup nano
 )
 
 
