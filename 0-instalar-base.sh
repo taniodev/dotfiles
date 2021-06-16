@@ -10,7 +10,7 @@ ponto_de_montagem="/mnt"
 pacotes=(
     base base-devel linux-lts linux-firmware
     grub networkmanager ntfs-3g os-prober
-    espeakup nano
+    alsa-utils espeakup nano
 )
 
 
