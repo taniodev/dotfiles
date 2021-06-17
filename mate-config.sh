@@ -7,6 +7,9 @@ if [ `id -u` -eq 0 ]; then
 fi
 
 
+# Configura o layout de teclado
+localectl set-x11-keymap br
+
 # Configura o layout de teclado na interface
 gsettings set org.mate.peripherals-keyboard-xkb.kbd layouts "['br']"
 
