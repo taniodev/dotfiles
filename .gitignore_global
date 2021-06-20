@@ -1,0 +1,5 @@
+# Arquivo que é gerado pelo asdf
+.tool-versions
+
+# Arquivo de configurações do Emacs por projeto
+.dir-locals.el

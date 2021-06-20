@@ -19,12 +19,12 @@ localectl set-x11-keymap br abnt2
 # Copia alguns arquivos de configuração
 echo "Copiando arquivos..."
 cp .bashrc $HOME
+cp .gitignore_global $HOME
 
 # Configurações do Git
 echo "Configurando o Git..."
 git config --global user.name "Tânio Scherer"
 git config --global user.email "tanioms3@gmail.com"
-touch ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 git config --global core.editor nano
 git config --global pull.rebase true   # rebase
@@ -36,6 +36,5 @@ else
     echo "Configurando o ASDF..."
     git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
 fi
-
 
 echo "Concluído!"
