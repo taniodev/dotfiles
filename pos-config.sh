@@ -28,6 +28,7 @@ git config --global user.email "tanioms3@gmail.com"
 git config --global core.excludesfile ~/.gitignore_global
 git config --global core.editor nano
 git config --global pull.rebase true   # rebase
+git config --global init.defaultBranch main
 
 # Configura o ASDF
 if [ -d $HOME/.asdf ]; then
