@@ -5,6 +5,10 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+if [ -f ~/.bash_aliases ]; then
+  . ~/.bash_aliases
+fi
+
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
@@ -14,6 +18,3 @@ PS1='[\u@\h \W]\$ '
 
 # Variáveis de ambiente do pipenv
 export PIPENV_VENV_IN_PROJECT=1
-
-# Alias para usar o manage.py do Django
-alias mng='python $VIRTUAL_ENV/../manage.py'
