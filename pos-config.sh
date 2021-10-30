@@ -16,10 +16,6 @@ fi
 # Configura o layout de teclado no xorg
 localectl set-x11-keymap br abnt2
 
-# Copia alguns arquivos de configuração
-echo "Copiando arquivos..."
-cp .bashrc $HOME
-cp .gitignore_global $HOME
 
 # Configurações do Git
 echo "Configurando o Git..."
