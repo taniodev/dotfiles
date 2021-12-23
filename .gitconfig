@@ -1,0 +1,16 @@
+[user]
+	name = Tânio Scherer
+	email = tanioms3@gmail.com
+[core]
+	excludesfile = /home/tanio/.gitignore_global
+	editor = nano
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
+[alias]
+	b = branch
+	cm = commit
+	l = log --oneline -5
+	s = status
+	su = status --untracked-files=no
