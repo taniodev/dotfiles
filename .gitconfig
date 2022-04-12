@@ -9,7 +9,12 @@
 [init]
 	defaultBranch = main
 [alias]
+	d = diff
+	dh = diff HEAD
 	b = branch
+	brm = branch -d
+	ck = checkout
+	ckb = checkout -b
 	cm = commit
 	l = log --oneline -5
 	s = status
