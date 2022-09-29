@@ -11,7 +11,11 @@ dotfiles:
   d_git:
     src: config/git
     dst: ~/.config/git
+  f_bash_aliases:
+    src: bash_aliases
+    dst: ~/.bash_aliases
 profiles:
   arch:
     dotfiles:
     - d_git
+    - f_bash_aliases
