@@ -8,4 +8,10 @@ config:
   link_on_import: nolink
   longkey: false
 dotfiles:
+  d_git:
+    src: config/git
+    dst: ~/.config/git
 profiles:
+  arch:
+    dotfiles:
+    - d_git
