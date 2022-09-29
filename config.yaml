@@ -14,8 +14,13 @@ dotfiles:
   f_bash_aliases:
     src: bash_aliases
     dst: ~/.bash_aliases
+  f_bashrc:
+    src: bashrc
+    dst: ~/.bashrc
+    chmod: '755'
 profiles:
   arch:
     dotfiles:
     - d_git
     - f_bash_aliases
+    - f_bashrc
