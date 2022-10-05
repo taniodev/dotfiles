@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-if [ `id -u` -eq 0 ]; then
-    echo "Não execute como super usuário"
-    exit 1
-fi
-
+echo "Iniciando configuração para o MATE Desktop..."
+sleep 1
 
 # Configura o layout de teclado na interface
 gsettings set org.mate.peripherals-keyboard-xkb.kbd layouts "['br']"
@@ -88,4 +85,6 @@ tee ~/.config/mate_dock_applet.conf << EOF
 EOF
 
 
-echo "Concluído!"
+echo "Fim do script!"
+sleep 1
+exit
