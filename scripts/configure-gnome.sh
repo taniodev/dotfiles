@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-if [ `id -u` -eq 0 ]; then
-    echo "Não execute como super usuário"
-    exit 1
-fi
-
+echo "Iniciando configuração para o GNOME Desktop..."
+sleep 1
 
 # Configura o layout de teclado na interface
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'br')]"
@@ -31,4 +28,6 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys home "['<Super>e']"
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 7200
 
 
-echo "Concluído!"
+echo "Fim do script!"
+sleep 1
+exit
