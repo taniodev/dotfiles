@@ -1,3 +1,6 @@
+# Listagem de arquivos e diretórios
+alias l='ls -1p --group-directories-first --color=auto'
+
 # Acesso rápido aos diretórios
 alias doc='cd ~/Documentos'
 alias dow='cd ~/Downloads/'
