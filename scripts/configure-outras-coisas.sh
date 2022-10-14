@@ -5,6 +5,24 @@ echo "Configurando o layout do teclado..."
 localectl set-x11-keymap br abnt2
 sleep 1
 
+# Lista de diretórios que serão criados automaticamente.
+diretorios=(
+    $HOME/.builds
+    $HOME/.local/bin
+)
+
+echo "Criando diretórios..."
+for diretorio in ${diretorios[@]}; do
+    if [ -d $diretorio ]; then
+        echo "Pulando: Diretório encontrado em $diretorio"
+    else
+        echo "Criando diretório $diretorio"
+        mkdir $diretorio
+    fi
+    sleep 1
+done
+sleep 1
+
 echo "Configurando o ASDF..."
 if [ -d $HOME/.asdf ]; then
     echo "Pulando configuração: diretório ASDF encontrado em $HOME/.asdf"
