@@ -41,6 +41,31 @@ else
 fi
 sleep 1
 
+echo "Configurando o GRUB..."
+sudo sed -i 's/#GRUB_INIT_TUNE/GRUB_INIT_TUNE/' /etc/default/grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+sleep 1
+
+echo "Systemd: desativando a suspensão ao fechar a tampa do notebook..."
+sudo sed -i "s/#HandleLidSwitch=suspend/HandleLidSwitch=ignore/" /etc/systemd/logind.conf
+sleep 1
+
+echo "Habilitando serviços..."
+sudo systemctl enable fstrim.timer
+sleep 1
+
+echo "Configurando o uso de memória..."
+echo "vm.swappiness=10" | sudo tee /etc/sysctl.d/99-sysctl.conf
+echo "vm.vfs_cache_pressure=50" | sudo tee --append /etc/sysctl.d/99-sysctl.conf
+sleep 1
+
+if [ -f /etc/lightdm/lightdm-gtk-greeter.conf ]; then
+    echo "Ativando o Orca no Lightdm..."
+    sudo sed -i "s/#reader=/reader=orca/" /etc/lightdm/lightdm-gtk-greeter.conf
+    sudo sed -i "/reader=orca/a a11y-states=+reader" /etc/lightdm/lightdm-gtk-greeter.conf
+    sleep 1
+fi
+
 echo "Fim do script!"
 sleep 1
 exit
