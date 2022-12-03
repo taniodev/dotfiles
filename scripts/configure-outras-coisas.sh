@@ -17,7 +17,7 @@ for diretorio in ${diretorios[@]}; do
         echo "Pulando: Diretório encontrado em $diretorio"
     else
         echo "Criando diretório $diretorio"
-        mkdir $diretorio
+        mkdir -p $diretorio
     fi
     sleep 1
 done
