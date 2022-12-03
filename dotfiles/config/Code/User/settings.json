@@ -1,0 +1,10 @@
+{
+    "editor.accessibilitySupport": "on",
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "workbench.startupEditor": "none",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "window.titleBarStyle": "custom",
+}

@@ -27,6 +27,10 @@ dotfiles:
   f_config:
     src: config/yt-dlp/config
     dst: ~/.config/yt-dlp/config
+  f_settings.json:
+    src: config/Code/User/settings.json
+    dst: ~/.config/Code/User/settings.json
+    chmod: '755'
 profiles:
   arch:
     dotfiles:
@@ -36,3 +40,4 @@ profiles:
     - f_profile
     - f_user-settings.conf
     - f_config
+    - f_settings.json
