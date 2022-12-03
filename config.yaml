@@ -34,6 +34,9 @@ dotfiles:
   d_qtile:
     src: config/qtile
     dst: ~/.config/qtile
+  f_gmrunrc:
+    src: gmrunrc
+    dst: ~/.gmrunrc
 profiles:
   arch:
     dotfiles:
@@ -45,3 +48,4 @@ profiles:
     - f_config
     - f_settings.json
     - d_qtile
+    - f_gmrunrc
