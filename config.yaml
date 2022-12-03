@@ -24,6 +24,9 @@ dotfiles:
   f_user-settings.conf:
     src: local/share/orca/user-settings.conf
     dst: ~/.local/share/orca/user-settings.conf
+  f_config:
+    src: config/yt-dlp/config
+    dst: ~/.config/yt-dlp/config
 profiles:
   arch:
     dotfiles:
@@ -32,3 +35,4 @@ profiles:
     - f_bashrc
     - f_profile
     - f_user-settings.conf
+    - f_config

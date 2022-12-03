@@ -1,0 +1,2 @@
+# Formato do nome do arquivo
+-o "%(title)s.%(ext)s"
