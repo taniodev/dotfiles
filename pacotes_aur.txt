@@ -1,0 +1,6 @@
+brisk-menu
+hunspell-pt-br
+microsoft-edge-stable-bin
+tclx
+visual-studio-code-bin
+yaru-sound-theme
