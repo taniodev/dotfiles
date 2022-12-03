@@ -21,6 +21,9 @@ dotfiles:
   f_profile:
     src: profile
     dst: ~/.profile
+  f_user-settings.conf:
+    src: local/share/orca/user-settings.conf
+    dst: ~/.local/share/orca/user-settings.conf
 profiles:
   arch:
     dotfiles:
@@ -28,3 +31,4 @@ profiles:
     - f_bash_aliases
     - f_bashrc
     - f_profile
+    - f_user-settings.conf
