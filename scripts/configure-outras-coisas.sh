@@ -23,6 +23,15 @@ for diretorio in ${diretorios[@]}; do
 done
 sleep 1
 
+echo "Configurando o yay..."
+if [ -d $HOME/.builds/yay ]; then
+    echo "Pulando configuração: diretório yay encontrado em $HOME/.builds/yay"
+else
+    echo "Baixando o yay..."
+    git clone https://aur.archlinux.org/yay.git ~/.builds/yay
+fi
+sleep 1
+
 echo "Configurando o ASDF..."
 if [ -d $HOME/.asdf ]; then
     echo "Pulando configuração: diretório ASDF encontrado em $HOME/.asdf"
