@@ -32,6 +32,15 @@ else
 fi
 sleep 1
 
+echo "Configurando o Poetry..."
+if type poetry &> /dev/null; then
+    echo "Pulando configuração: poetry encontrado no PATH"
+else
+    echo "Obtendo o script de instalação..."
+    curl -sSL https://install.python-poetry.org | python3 -
+fi
+sleep 1
+
 echo "Fim do script!"
 sleep 1
 exit
