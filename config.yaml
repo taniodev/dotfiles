@@ -31,6 +31,9 @@ dotfiles:
     src: config/Code/User/settings.json
     dst: ~/.config/Code/User/settings.json
     chmod: '755'
+  d_qtile:
+    src: config/qtile
+    dst: ~/.config/qtile
 profiles:
   arch:
     dotfiles:
@@ -41,3 +44,4 @@ profiles:
     - f_user-settings.conf
     - f_config
     - f_settings.json
+    - d_qtile
