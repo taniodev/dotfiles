@@ -5,6 +5,7 @@ espeak-ng
 firefox
 firefox-i18n-pt-br
 git
+gmrun
 lightdm
 lightdm-gtk-greeter
 mate
