@@ -21,9 +21,6 @@ gsettings set org.mate.caja.desktop computer-icon-visible false
 gsettings set org.mate.caja.desktop volumes-visible false
 gsettings set org.mate.caja.desktop home-icon-visible false
 
-# Quantidade de workspaces disponíveis
-gsettings set org.mate.Marco.general num-workspaces 9
-
 # Modo de exibição padrão ao acessar uma pasta
 gsettings set org.mate.caja.preferences default-folder-viewer 'compact-view'
 
@@ -48,7 +45,6 @@ gsettings set org.mate.power-manager button-lid-battery 'nothing'
 
 # Ajusta o brilho da tela
 gsettings set org.mate.power-manager brightness-ac 5.0
-
 
 # Configura algumas teclas de atalho
 # Abrir o gerenciador de arquivos
@@ -76,9 +72,18 @@ gsettings set org.mate.Marco.window-keybindings move-to-workspace-right '<Mod4><
 gsettings set org.mate.Marco.window-keybindings move-to-workspace-up '<Mod4><Control><Shift>Up'
 gsettings set org.mate.Marco.window-keybindings move-to-workspace-down '<Mod4><Control><Shift>Down'
 
+# Configuração de workspaces
+# Quantidade de workspaces disponíveis
+gsettings set org.mate.Marco.general num-workspaces 9
+
+# Atalhos para trocar e mover entre os workspaces
+for numero in {1..9}; do
+    gsettings set org.mate.Marco.global-keybindings switch-to-workspace-$numero "<Mod4>$numero"
+    gsettings set org.mate.Marco.window-keybindings move-to-workspace-$numero "<Shift><Mod4>$numero"
+done
 
 # Configura alguns atalhos no Mate dock applet
-tee ~/.config/mate_dock_applet.conf << EOF
+tee ~/.config/mate_dock_applet.conf <<EOF
 <root><pinned_apps>
 <desktop_file name="pluma.desktop" />
 <desktop_file name="thunderbird.desktop" />
@@ -86,7 +91,6 @@ tee ~/.config/mate_dock_applet.conf << EOF
 <desktop_file name="chromium.desktop" />
 </pinned_apps></root>
 EOF
-
 
 echo "Fim do script!"
 sleep 1
