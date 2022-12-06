@@ -21,6 +21,9 @@ gsettings set org.mate.caja.desktop computer-icon-visible false
 gsettings set org.mate.caja.desktop volumes-visible false
 gsettings set org.mate.caja.desktop home-icon-visible false
 
+# Quantidade de workspaces disponíveis
+gsettings set org.mate.Marco.general num-workspaces 9
+
 # Modo de exibição padrão ao acessar uma pasta
 gsettings set org.mate.caja.preferences default-folder-viewer 'compact-view'
 
