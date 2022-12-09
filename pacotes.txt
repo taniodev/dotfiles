@@ -6,6 +6,7 @@ firefox
 firefox-i18n-pt-br
 git
 gmrun
+kdeconnect
 lightdm
 lightdm-gtk-greeter
 mate
