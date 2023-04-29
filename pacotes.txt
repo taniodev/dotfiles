@@ -6,12 +6,14 @@ firefox
 firefox-i18n-pt-br
 git
 gmrun
+gvfs-mtp
 kdeconnect
 lightdm
 lightdm-gtk-greeter
 mate
 mate-extra
 mpv
+mtpfs
 openssh
 orca
 pacman-contrib
