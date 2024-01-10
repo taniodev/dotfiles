@@ -41,6 +41,9 @@ dotfiles:
     src: config/mpv
     dst: ~/.config/mpv
     chmod: '700'
+  d_yt-dlp:
+    src: config/yt-dlp
+    dst: ~/.config/yt-dlp
 profiles:
   arch:
     dotfiles:
@@ -54,3 +57,10 @@ profiles:
     - d_qtile
     - f_gmrunrc
     - d_mpv
+  wsl:
+    dotfiles:
+    - d_git
+    - d_yt-dlp
+    - f_bash_aliases
+    - f_bashrc
+    - f_profile
