@@ -20,8 +20,10 @@ if [ -f /usr/share/git/git-prompt.sh ]; then
 fi
 
 # Configuração do asdf
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+if [ -f $HOME/.asdf/asdf.sh ]; then
+  . $HOME/.asdf/asdf.sh
+  . $HOME/.asdf/completions/asdf.bash
+fi
 
 # Variáveis de ambiente do pipenv
 export PIPENV_VENV_IN_PROJECT=1
