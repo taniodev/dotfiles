@@ -2,6 +2,14 @@
 # ~/.bash_profile
 #
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+# Se estiver usando o bash
+if [ -n "$BASH_VERSION" ]; then
+  if [ -f "${HOME}/.bashrc" ]; then
+    . "${HOME}/.bashrc"
+  fi
+fi
 
-export PATH="${PATH}:${HOME}/.local/bin"
+# Colocar o diretório bin local no PATH
+if [ -d "${HOME}/.local/bin" ]; then
+  PATH="${PATH}:${HOME}/.local/bin"
+fi

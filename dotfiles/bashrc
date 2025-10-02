@@ -2,16 +2,20 @@
 # ~/.bashrc
 #
 
-# If not running interactively, don't do anything
+# Se não estiver sendo executado de maneira interativa
 [[ $- != *i* ]] && return
+
+# Não colocar no histórico comandos duplicados ou que comecem com espaço
+HISTCONTROL=ignoreboth
+
+# Aliases personalizados
+alias ls='ls --color=auto'
 
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
 
-alias ls='ls --color=auto'
-
-# String personalizada para o prompt PS1
+# String personalizada no prompt
 PS1='[\u@\h \W]\$ '
 
 if [ -f /usr/share/git/git-prompt.sh ]; then

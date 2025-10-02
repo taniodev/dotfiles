@@ -17,20 +17,15 @@ dotfiles:
   f_bashrc:
     src: bashrc
     dst: ~/.bashrc
-    chmod: '755'
   f_profile:
     src: profile
     dst: ~/.profile
   f_user-settings.conf:
     src: local/share/orca/user-settings.conf
     dst: ~/.local/share/orca/user-settings.conf
-  f_config:
-    src: config/yt-dlp/config
-    dst: ~/.config/yt-dlp/config
   f_settings.json:
     src: config/Code/User/settings.json
     dst: ~/.config/Code/User/settings.json
-    chmod: '755'
   d_qtile:
     src: config/qtile
     dst: ~/.config/qtile
@@ -40,7 +35,6 @@ dotfiles:
   d_mpv:
     src: config/mpv
     dst: ~/.config/mpv
-    chmod: '700'
   d_yt-dlp:
     src: config/yt-dlp
     dst: ~/.config/yt-dlp
@@ -52,11 +46,23 @@ profiles:
     - f_bashrc
     - f_profile
     - f_user-settings.conf
-    - f_config
     - f_settings.json
     - d_qtile
     - f_gmrunrc
     - d_mpv
+    - d_yt-dlp
+
+  debian:
+    dotfiles:
+    - d_git
+    - f_bash_aliases
+    - f_bashrc
+    - f_profile
+    - f_user-settings.conf
+    - f_settings.json
+    - d_mpv
+    - d_yt-dlp
+
   wsl:
     dotfiles:
     - d_git
